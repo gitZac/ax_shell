@@ -1,0 +1,37 @@
+{
+  "name": "ax_shell",
+  "version": "1.0.0",
+  "description": "A starter theme for Across That and Underscores.",
+  "main": "index.js",
+  "scripts": {
+    "start":"gulp"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gitZac/ax_shell.git"
+  },
+  "author": "Zac Taylor",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gitZac/ax_shell/issues"
+  },
+  "homepage": "https://github.com/gitZac/ax_shell#readme",
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-preset-env": "^1.7.0",
+    "babel-register": "^6.26.0",
+    "browser-sync": "^2.26.7",
+    "del": "^5.0.0",
+    "gulp": "^4.0.2",
+    "gulp-clean-css": "^4.2.0",
+    "gulp-if": "^3.0.0",
+    "gulp-imagemin": "^6.0.0",
+    "gulp-replace": "^1.0.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-zip": "^5.0.0",
+    "vinyl-named": "^1.1.0",
+    "webpack-stream": "^5.2.1",
+    "yargs": "^13.3.0"
+  }
+}
