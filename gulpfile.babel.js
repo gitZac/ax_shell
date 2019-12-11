@@ -24,9 +24,10 @@ import autoprefixer from 'gulp-autoprefixer';
 /**
  * Configuration.
  *
- * Project Configuration for gulp tasks.
- *
- * Edit the variables as per your project requirements.
+ * Variables and Paths.
+ * For boilerplate setup, you should be able to make all edits in the configuration.    
+ * Your PATHS will depend on how you have your theme files set up.
+ * Your serverProxy will depend on the address to your local environment. 
  */
 
 const paths = {
@@ -36,12 +37,24 @@ const paths = {
     },
 
     scripts: {
-        src: ['']
+        src: ['./js/main/bundle.js'],
+        dest: ['./js/main/dist']
+    },
+    
+    package:{
+        src:['**/*', '!.vscode', '!node_modules{,/**}', '!packaged{,/**}', '!.babelrc', '!.gitignore', '!gulpfile.babel.js', '!package.json', '!package-lock.json'],
+        dest:['./packaged']
     }
 }
 
 const server = browserSync.create();
+const serverProxy = 'https://axshell.dev.cc/';
 
+
+/**
+ *  TASKS
+ *
+ */
 /**
  * Task: BrowserSync
  *
@@ -51,7 +64,7 @@ const server = browserSync.create();
 
 export const spinup = (done) => {
     server.init({
-        proxy: 'https://axshell.dev.cc/'
+        proxy: serverProxy
     });
     done();
 }
@@ -60,8 +73,6 @@ export const reload = (done) => {
     server.reload();
     done();
 }
-
-
 
 /**
  * Task: styles
@@ -96,7 +107,7 @@ export const styles = (done) => {
  * Task: Scripts
  *
  * Allows module bundling for scripts, and use of ES5 syntax.
- *
+ * Scripts are output to a minified dist file, which is enqueued.
  */
 
 export const scripts = (done) => {
@@ -137,10 +148,15 @@ export const scripts = (done) => {
 
 export const watch = () => {
     gulp.watch('./sass/**/*.scss', styles);
+    gulp.watch('./js/**/*.js', gulp.series(scripts, reload));
     gulp.watch('**/*.php', reload);
 }
 
-// EXPORT TASKS
+/**
+ * EXPORTS
+ *
+ *
+ */
 
 export const dev = gulp.series(spinup, watch);
 

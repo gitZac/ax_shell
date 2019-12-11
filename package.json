@@ -18,6 +18,7 @@
   "homepage": "https://github.com/gitZac/ax_shell#readme",
   "devDependencies": {
     "babel-core": "^6.26.3",
+    "babel-loader": "^8.0.6",
     "babel-preset-env": "^1.7.0",
     "babel-register": "^6.26.0",
     "browser-sync": "^2.26.7",
@@ -34,5 +35,8 @@
     "vinyl-named": "^1.1.0",
     "webpack-stream": "^5.2.1",
     "yargs": "^13.3.0"
+  },
+  "dependencies": {
+    "@babel/core": "^7.7.5"
   }
 }
