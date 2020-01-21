@@ -1,1 +1,1 @@
-console.log('Hello from Slider.js');
+console.log("Slider.js")

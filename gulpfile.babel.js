@@ -38,7 +38,7 @@ const paths = {
 
     scripts: {
         src: ['./js/main/bundle.js'],
-        dest: ['./js/main/dist']
+        dest: ['./dist/js']
     },
     
     package:{
@@ -48,7 +48,7 @@ const paths = {
 }
 
 const server = browserSync.create();
-const serverProxy = 'https://axshell.dev.cc/';
+const serverProxy = 'http://axthat.local/';
 
 
 /**
@@ -134,7 +134,7 @@ export const scripts = (done) => {
                 jquery:'jQuery'
             }
         }))
-        .pipe(gulp.dest(paths.scripts.dest))
+        .pipe(gulp.dest(paths.scripts.dest)) 
     
         done();
 }
