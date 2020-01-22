@@ -122,8 +122,10 @@ add_action( 'widgets_init', 'ax_shell_widgets_init' );
 function ax_shell_scripts() {
 	wp_enqueue_style( 'ax_shell-style', get_stylesheet_uri() );
 
-	wp_enqueue_style('ax_shell-libstyle1', get_template_directory_uri() . '/lib/css/bootstrap-grid.min.css');
+	// wp_enqueue_style('ax_shell-libstyle1', get_template_directory_uri() . '/lib/css/bootstrap-grid.min.css');
 	wp_enqueue_style('ax_shell-libstyle2', get_template_directory_uri() . '/lib/css/bulma.min.css');
+	wp_enqueue_style('ax_shell-libstyle3', get_template_directory_uri() . '/lib/css/font-awesome.min.css');
+
 
 	wp_enqueue_script( 'ax_shell-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 

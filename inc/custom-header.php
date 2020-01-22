@@ -2,7 +2,7 @@
 /**
  * Sample implementation of the Custom Header feature
  *
- * You can add an optional custom header image to header.php like so ...
+ * You can add an optional custom header image to header.php likehgjfjhf so ...
  *
 	<?php the_header_image_tag(); ?>
  *

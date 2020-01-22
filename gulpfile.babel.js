@@ -48,7 +48,7 @@ const paths = {
 }
 
 const server = browserSync.create();
-const serverProxy = 'http://axthat.local/';
+const serverProxy = 'https://bulmatheme.dev.cc/';
 
 
 /**
