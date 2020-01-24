@@ -34,7 +34,7 @@ get_header();
                     <div class="column is-4">
                         <div class="card is-shady">
                             <div class="card-image has-text-centered">
-                                <i class="fa fa-snowflake-o" aria-hidden="true"></i>
+                                <i class="fa fa-paw" aria-hidden="true"></i>
                             </div>
                             <div class="card-content">
                                 <div class="content">
@@ -48,7 +48,7 @@ get_header();
                     <div class="column is-4">
                         <div class="card is-shady">
                             <div class="card-image has-text-centered">
-                                <i class="fa fa-snowflake-o" aria-hidden="true"></i>
+                                <i class="fa fa-empire" aria-hidden="true"></i>
                             </div>
                             <div class="card-content">
                                 <div class="content">
@@ -62,7 +62,7 @@ get_header();
                     <div class="column is-4">
                         <div class="card is-shady">
                             <div class="card-image has-text-centered">
-                                <i class="fa fa-snowflake-o" aria-hidden="true"></i>
+                                <i class="fa fa-apple" aria-hidden="true"></i>
                             </div>
                             <div class="card-content">
                                 <div class="content">
