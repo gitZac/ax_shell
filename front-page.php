@@ -107,7 +107,6 @@ get_header();
                             </div>
                         </div>
                     </div> <!-- ./Column-->
-
                 </div> <!-- ./ColumnS-->
             </section>
             <section class="container">
@@ -184,7 +183,6 @@ get_header();
                             </article>
                         </div> <!-- ./Parent Tile  -->
                     </div> <!-- ./Ancestor-->
-                    
                     <div class="tile is-ancestor">
                         <div class="tile is-parent is-shady">
                             <article class="tile is-child notification is-white">
@@ -205,7 +203,6 @@ get_header();
                             </article>
                         </div>
                     </div> <!-- ./Ancestor-->
-
                     <div class="tile is-ancestor">
                         <div class="tile is-parent is-8 is-shady">
                             <div class="tile is-child notification is-white">
@@ -228,7 +225,6 @@ get_header();
                             </article>
                         </div>
                     </div> <!-- ./Ancestor-->
-    
                 </div> <!-- ./Sandbox-->
             </section>
             <footer class="footer">
@@ -279,7 +275,6 @@ get_header();
                                     <span class="tag is-info">MIT license</span>
                                 </div>                            
                             </a>
-
                         </div>                           
                     </div>
                 </div> <!-- ./Container -->
