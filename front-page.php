@@ -15,7 +15,41 @@ get_header();
 		<main id="main" class="site-main">
             <section class="hero is-info is-medium is-bold">
                 <div class="hero-head">
-                    <!-- Navbar code -->
+                    <nav class="navbar">
+                        <div class="container">
+                            <div class="navbar-brand">
+                                <a href="#" class="navbar-item">
+                                    <img src="http://bulma.io/images/bulma-type-white.png" alt="">
+                                </a>
+                                <span data-target="navbarMenu" class="navbar-burger burger">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </span>
+                            </div>
+                            <div id="navbarMenu" class="navbar-menu">
+                                <div class="navbar-end">
+                                    <div class="tabs is-right">
+                                        <ul>
+                                            <li class="is-active"><a>Home</a></li>
+                                            <li><a href="">Examples</a></li>
+                                            <li><a href="">Features</a></li>
+                                            <li><a href="">Team</a></li>
+                                            <li><a href="">Help</a></li>         
+                                        </ul>
+                                        <span class="navbar-item">
+                                            <a class="button is-white is-outlined" href="https://github.com/BulmaTemplates/bulma-templates/blob/master/templates/hero.html">
+                                                <span class="icon">
+                                                    <i class="fa fa-github"></i>
+                                                </span>
+                                                <span title="Hello from the other side">View Source</span>
+                                            </a>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </nav>
                 </div> <!-- ./Hero Nav-->
                 <div class="hero-body">
                     <div class="container has-text-centered">
@@ -252,7 +286,6 @@ get_header();
             </footer>
 		</main><!-- #main -->
 	</div><!-- #primary -->
-
 <?php
 get_sidebar();
 get_footer();
