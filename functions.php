@@ -140,6 +140,27 @@ function ax_shell_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'ax_shell_scripts' );
 
+
+add_filter( 'get_custom_logo', 'change_logo_class' );
+
+/**
+ * Change class to the_custom_logo
+ */
+
+function change_logo_class( $html ) {
+
+    $html = str_replace( 'custom-logo', 'navbar-item', $html );
+    $html = str_replace( 'custom-logo-link', 'navbar-item', $html );
+
+    return $html;
+}
+
+
+/**
+ * Add Hero Walker Nav
+ */
+require get_template_directory() . '/inc/walker-nav_bulma-hero.php';
+
 /**
  * Implement the Custom Header feature.
  */

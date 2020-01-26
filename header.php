@@ -24,35 +24,42 @@
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'ax_shell' ); ?></a>
 
-	<header id="masthead" class="site-header">
-		<div class="site-branding">
-			<?php
-			the_custom_logo();
-			if ( is_front_page() && is_home() ) :
-				?>
-				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-				<?php
-			else :
-				?>
-				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-				<?php
-			endif;
-			$ax_shell_description = get_bloginfo( 'description', 'display' );
-			if ( $ax_shell_description || is_customize_preview() ) :
-				?>
-				<p class="site-description"><?php echo $ax_shell_description; /* WPCS: xss ok. */ ?></p>
-			<?php endif; ?>
-		</div><!-- .site-branding -->
+	<header id="masthead" class="site-header hero is-info is-medium is-bold">
+		<div class="hero-head">
+			<nav class="navbar">
+				<div class="container">
+					<div class="navbar-brand side-branding">
+						<?php the_custom_logo() ?>
+						<span data-target="navbarMenu" class="navbar-burger burger">
+							<span></span>
+							<span></span>
+							<span></span>
+						</span>
+					</div> <!-- ./navbar-brand-->
 
-		<nav id="site-navigation" class="main-navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'ax_shell' ); ?></button>
-			<?php
-			wp_nav_menu( array(
-				'theme_location' => 'menu-1',
-				'menu_id'        => 'primary-menu',
-			) );
-			?>
-		</nav><!-- #site-navigation -->
-	</header><!-- #masthead -->
-
+					<div id="navbarMenu" class="navbar-menu">
+						<div class="navbar-end">
+							<div class="tabs is-right">
+								<ul>
+									<li class="is-active"><a>Home</a></li>
+									<li><a href="">Examples</a></li>
+									<li><a href="">Features</a></li>
+									<li><a href="">Team</a></li>
+									<li><a href="">Help</a></li>         
+								</ul>
+								<span class="navbar-item">
+									<a class="button is-white is-outlined" href="https://github.com/BulmaTemplates/bulma-templates/blob/master/templates/hero.html">
+										<span class="icon">
+											<i class="fa fa-github"></i>
+										</span>
+										<span title="Hello from the other side">View Source</span>
+									</a>
+								</span>
+							</div>
+						</div>
+					</div> <!-- ./navbar-menu-->
+				</div> <!-- ./Container-->
+			</nav> <!-- ./Hero Nav-->
+		</div> <!-- ./Hero Head-->
+	</header>
 	<div id="content" class="site-content">
