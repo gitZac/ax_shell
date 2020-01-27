@@ -11,7 +11,7 @@
 
 ?>
 <!doctype html>
-<html <?php language_attributes(); ?>>
+<html  <?php language_attributes(); ?>>
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -23,43 +23,47 @@
 <body <?php body_class(); ?>>
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'ax_shell' ); ?></a>
-
 	<header id="masthead" class="site-header hero is-info is-medium is-bold">
 		<div class="hero-head">
-			<nav class="navbar">
+			<nav class="navbar" aria-label="main navigation">
 				<div class="container">
-					<div class="navbar-brand side-branding">
-						<?php the_custom_logo() ?>
-						<span data-target="navbarMenu" class="navbar-burger burger">
-							<span></span>
-							<span></span>
-							<span></span>
-						</span>
-					</div> <!-- ./navbar-brand-->
+					<div class="navbar-brand">
+						<a class="navbar-item" href="<?php echo esc_url( home_url( '/' ) );?>">
+							<?php the_custom_logo(); ?>
+						</a>
 
-					<div id="navbarMenu" class="navbar-menu">
+						<button class="button navbar-burger is-active" data-target="primary-menu" aria-controls="primary-menu" aria-haspopup="true" aria-label="Menu Button" aria-pressed="false">
+							<span aria-hidden="true"></span>
+							<span aria-hidden="true"></span>
+							<span aria-hidden="true"></span>
+						</button>
+					</div>
+
+					<div id="primary-menu" class="navbar-menu is-active">
 						<div class="navbar-end">
-							<div class="tabs is-right">
-								<ul>
-									<li class="is-active"><a>Home</a></li>
-									<li><a href="">Examples</a></li>
-									<li><a href="">Features</a></li>
-									<li><a href="">Team</a></li>
-									<li><a href="">Help</a></li>         
-								</ul>
-								<span class="navbar-item">
-									<a class="button is-white is-outlined" href="https://github.com/BulmaTemplates/bulma-templates/blob/master/templates/hero.html">
-										<span class="icon">
-											<i class="fa fa-github"></i>
-										</span>
-										<span title="Hello from the other side">View Source</span>
-									</a>
-								</span>
-							</div>
-						</div>
-					</div> <!-- ./navbar-menu-->
+							<?php wp_nav_menu(array(
+								'theme-location' => 'header-menu', //change it according to your register_nav_menus() function
+								'depth'		=>	3,
+								'menu'			=>	'NewNav',
+								'container'		=>	'',
+								'menu_class'		=>	'',
+								'items_wrap'		=>	'%3$s',
+								'walker'		=>	new ax_Bulma_Walker_Nav_Hero(),
+								'fallback_cb'		=>	'Bulma_NavWalker::fallback'
+							));
+							?>
+						</div> <!-- ./Navbar-End-->
+					</div> <!-- ./#Primary Menu-->
 				</div> <!-- ./Container-->
-			</nav> <!-- ./Hero Nav-->
+			</nav> <!-- ./Navbar-->
 		</div> <!-- ./Hero Head-->
+        <section class="hero is-medium is-bold">
+            <div class="hero-body">
+                <div class="container has-text-centered">
+                    <h1 class="title">Welcome to Ax_</h1>
+                    <h2 class="subtitle">A bulma-based WP Theme. Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde exercitationem repudiandae recusandae minima consectetur nostrum illo, eum maxime quos laborum libero accusantium ipsam ipsum iure rerum dolorem. Enim, quis temporibus?</h2>
+                </div>
+            </div> <!-- ./Hero Body-->
+        </section> <!-- ./Hero -->
 	</header>
 	<div id="content" class="site-content">

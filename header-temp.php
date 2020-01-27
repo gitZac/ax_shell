@@ -24,9 +24,9 @@
 			wp_nav_menu( array(
 				'theme_location' => 'menu-1',
 				'menu_id'        => 'primary-menu',
-				'container'		 => 'nav',
-				'container_class'=> 'navbar navbar-default',
-				'menu_class' => 'nav nav-pills',
+				'container'		 => '',
+				'container_class'=> '',
+				'menu_class' => '',
 				'walker' => new ax_Bulma_Walker_Nav_Hero()
 			) );
 			?>
